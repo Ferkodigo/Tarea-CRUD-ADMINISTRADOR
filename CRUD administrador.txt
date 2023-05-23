@@ -1,0 +1,35 @@
+CREATE TABLE `administrador` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(50) DEFAULT NULL,
+  `apellido` varchar(50) DEFAULT NULL,
+  `salario` double DEFAULT NULL,
+  `carnet` varchar(50) DEFAULT NULL,
+  `telefono` int(11) DEFAULT NULL,
+  `correo` varchar(30) DEFAULT NULL,
+  `password` varchar(10) DEFAULT NULL,
+  `id_departamento` int(11) DEFAULT NULL,
+  `id_rol` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- INSERT
+
+INSERT INTO `administrador` (`id`, `nombre`,`apellido`,`salario`,`carnet`,`telefono`,`correo`,`password`,`id_departamento`,`id_rol`) VALUES
+(1, 'Fernando','Gavidia','1200','GN003','77123563','gavidia@gmail.com','fgavidia2003','11','1'),
+(2, 'Laura','Pacheco','670','PM004','67890934','laurapacheco@gmail.com','pacheco2003','5','2'),
+(3, 'Luka','Cruz','900','CG005','76542312','lukacruz@gmail.com','lcruz2003','4','3');
+
+-- READ
+
+SELECT * FROM administrador
+
+-- UPDATE
+
+UPDATE administrador
+SET apellido = Nolasco, salario = 1500, telefono = 79654378,id_rol = 5
+WHERE id = '1';
+
+-- DELETE
+
+DELETE FROM administrador 
+WHERE name='Laura';
+
